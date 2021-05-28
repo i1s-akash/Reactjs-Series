@@ -594,10 +594,15 @@ ReactDOM.render(<AppForms/>, document.getElementById('root'));
 
 
 /*
-
-*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppForms from './AppForms';
 
 ReactDOM.render(<AppForms/>, document.getElementById('root'));
+*/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SpreadOperator from './SpreadOperator';
+
+ReactDOM.render(<SpreadOperator/>, document.getElementById('root'));
