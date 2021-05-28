@@ -1,6 +1,5 @@
 /*
 //Complete Responsive Animated Website
-*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
@@ -15,8 +14,7 @@ ReactDOM.render(
     ,
     document.getElementById('root')
 );
-
-
+*/
 
 
 /*
@@ -596,9 +594,10 @@ ReactDOM.render(<AppForms/>, document.getElementById('root'));
 
 
 /*
+
+*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppForms from './AppForms';
 
 ReactDOM.render(<AppForms/>, document.getElementById('root'));
-*/
