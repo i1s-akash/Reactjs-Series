@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+<!-- <form autocomplete="on">
+  <label for="name">Username:</label>
+  <input type="text" id="name" name="name">
+  <input type="submit" value="Submit">
+</form> -->
+
+	<!-- <button id="btn">Click Me</button> -->
+
+	<script>
+		/*
+		//#3video
+		var n = 3;
+
+		function square(num){
+			var ans = num*num;
+			return ans;
+		}
+
+		var square2 = square(n);
+		var square4 = square(4);
+		*/
+
+
+		/*
+		//#4video
+		console.log(a);
+		var a = 2;
+		console.log(a);
+
+		var getName = () => {
+			console.log("Namaste JavaScript!!!");
+		};			
+
+		getName();
+
+		// var getName = () => {
+		// 	console.log("Namaste JavaScript!!!");
+		// };	
+		*/
+
+
+		/*
+		//#5video
+		var x = 1;
+		a();
+		b();
+
+		console.log(x);
+
+		function a(){
+			var x = 10;
+			console.log(x);
+		}
+
+		function b(){
+			//We can say this part is a initialization of this function
+			var x = 100;
+			console.log(x);
+		}		
+		*/
+
+
+		//Completed till 7th video
+
+
+		/*
+		//#8video
+		var a = 10;
+
+		function b(){
+			var a = 100;
+			function c(){
+				var a = 1000;
+				console.log(a);
+			}
+			c();
+		}
+		b();		
+		*/
+
+
+		/*
+		//#9video
+		const b = 10;
+		b = 10;
+		function a(){
+			console.log(b);
+		}
+
+		a();
+
+		//will be an error as syntax error, It mean the do like function & var's indenifiers
+		let a = 10; //in script scope, although the program won't execute
+		console.log(a);
+		var a = 10;
+		*/
+
+
+		/*
+		//#10video
+		var a = 100;
+		{
+			var a = 10;
+			let b = 20;
+			const c = 30;
+		}
+		console.log("a printed")
+		console.log(a);	
+
+
+		// let a = 20;
+		// function b(){
+		// 	var b = 20;
+		// }
+		// console.log(b())
+		// console.log(a);			
+		*/
+
+
+		//Completed till 10th video
+
+
+		/*
+		//#12video
+		function a(){ //Closures
+			var num = 10;
+			function b(){
+				console.log(num);
+			}
+			b();
+		}
+		a();
+
+		function a(){
+			var num = 10;
+			function b(){
+				console.log(num);
+			}
+			console.log(b()); //Undefined
+		}
+
+		console.log(a()); //Undefined
+
+		function a(){
+			var num = 10;
+			function b(){
+				return console.log(num);
+			}
+			b();
+		}
+		a();
+
+		function a() {
+			var num = 10;
+			function b() {
+				console.log(a);
+			}
+			return a;
+		}
+		console.log(a()()()); //Won't an error
+
+		function a(){ //Closures(a)
+			var num = 10;
+			function b(){
+				console.log(num);
+			}
+			return b;
+		}
+		console.log(a()()); //10; undefined;			
+
+		function a(){
+			var num = 10;
+			var num2 = function b(){
+				console.log(num);
+			}
+			// return num2();
+			return num2;
+		}
+		a()();
+
+		function a(){
+			var num = 10;
+			function b(){
+				console.log(num);
+			}
+			return b;
+		}
+
+		var num2 = a();
+		num2();				
+
+		function a(){
+			var num = 10;
+			function b(){
+				// var num2 = 20;
+				function c(){
+					// console.log(num2);
+					console.log(num);
+				}
+				c();
+			}
+			b();
+		}
+		a();		
+		*/
+
+
+		/*
+		//#13video
+		function a(){
+			var num = 10;
+			setTimeout(function(){
+				console.log(num); //setTimeout, async in console
+			}, 3000);
+			console.log("Namaste JavaScript");
+		}
+		a();	
+
+		function a(){
+			for(var i = 1; i<=5; i++){
+				setTimeout(function(){ 
+					console.log(i); //Closures(a)
+				}, i*1000);
+			}
+			console.log("Namaste JavaScript");	
+		}	
+		a();	
+
+		function a(){
+			for(let i = 1; i<=5; i++){ //There will also be 6 in the block but won't show into console
+				setTimeout(function(){
+					console.log(i);
+				}, i*1000);
+			}
+			console.log("Namaste JavaScript");	
+		}	
+		a();	
+
+		function a(){
+			for(const i = 1; i<=5; i++){ //There will be an error while having const bcoz it can't be declared again
+				setTimeout(function(){
+					console.log(i);
+				}, i*1000);
+			}
+			console.log("Namaste JavaScript");	
+		}	
+		a();	
+
+		function a(num1){
+			var num = 2;
+			function b(){
+				console.log(num, num1); //Closure (a) as num 2, num1 4
+			}
+			b()
+		}
+		a(4);	
+
+		function a(){
+			for(var i = 1; i<=5; i++){ //There will be an error while having const bcoz it can't be declared again
+				function c(x){
+					setTimeout(function(){
+						console.log(x);
+					}, i*1000);					
+				}
+				c(i)
+			}
+			console.log("Namaste JavaScript");	
+		}	
+		a();						
+		*/	
+
+
+		/*
+		//#14video		
+		let a = 10;
+		function b(){
+			console.log(a);
+		}
+		b();
+
+		var counter = 0;
+		function a(){
+			counter++;
+			console.log(counter);
+		}
+		a(); //1
+		a(); //2
+		console.log(counter); //2		
+
+		*/
+
+
+		/*
+		//#14video
+		// Use of double paranthese in js
+		function a(){ //You will se only a scope as local(Return value as f b()) & global scope
+			var num = 10;
+			return function b(){console.log(num);};
+		}
+		a()();
+
+		function a(){ //Here you will see local, Closure & Global scope
+			var num = 10;
+			function b(){
+				console.log(b);
+			}
+			b();
+		}
+		a();
+
+		//Are let declaration closed over?
+		function a(){
+			function b(){
+				console.log(num); //If you put debugger here then it will already having closer num = 10;
+			}//Here return value will be undefined
+			// let num = 10; It is an error
+			let num = 10;			
+			b();
+		}	
+		a();
+		//I think, when we put debugger insides any nested function. Till then its parent function will already be executed that's why when we put debugger inside console, we see it is already having clsoure.
+
+		//Are function parameters closed over?
+		function a(num){
+			function b(){
+				console.log(num);
+			}
+			b();//You will always get debugger here
+		}//Here return & in call stack will be all
+		a(5);		
+
+		//Data hiding & Encapsulation in Js
+		function a(){
+			var counter = 0;
+			return function b(){
+				counter++;
+				console.log(counter);
+			}
+		}
+		var close = a();
+		close();
+		close();
+
+		var close1 = a();
+		close1();
+		close1();
+
+		function Coutner(){
+			var count = 0;
+
+			this.incrementCounter = function (){
+				count++;
+				console.log(count);
+			}
+
+			this.decrementCounter = function (){
+				count--;
+				console.log(count);
+			}			
+		}
+
+		var counter1 = new Coutner()
+
+		counter1.incrementCounter();
+		counter1.decrementCounter();
+		counter1.decrementCounter();
+		counter1.decrementCounter();
+
+		function a(){
+			var x = 0, z= 10;
+			function b(){
+				console.log(x);
+				console.log(z);
+			}
+
+			b();
+		}
+
+		a();					
+		*/
+
+
+		/*
+		//#15video
+		//Function Statement or Declaration
+		function a(){
+
+		}
+		a();
+
+		//Function Expression
+		var one = function b(){
+			console.log("b called");
+		}
+		one();		
+
+		//Function Declaration vs Function Expression
+		a();
+		one(); //Uncaught TypeError: one is not a function    
+
+		function a(){
+			console.log("a called");
+		}
+
+		var one = function b(){
+			console.log("b called");
+		}	
+
+		//Anonymous Function 
+		function () { //Syntax Error
+			// body...
+		}	
+
+		//Named Function Expression
+		var two = function c(){
+			console.log('c called');
+		}
+
+		c(); //Corner Gotcha
+		two();	
+
+		//First Class Function
+		//Passing Anonymous Function As Parameter
+		var three = function(param1){
+			console.log(param1);
+		}
+
+		three(function(){
+
+		});
+
+		//Passing Named Function As Parameter & Then Calling It Into Function
+		var  four = function(param1){
+			console.log(param1);
+			param1();
+		}
+
+		four(function b(){
+			console.log("b called");
+		});	
+
+		//Passing Already Declared Named Function Into Function As A Value
+		var three = function(param1){
+			console.log(param1);
+			param1();
+		}
+
+		function b(){
+			console.log("b called");
+		}		
+
+		three(b);	
+
+		//Returning Function is also a First Class Function
+		var five = function(param1){
+			// return function(){
+
+			// }
+
+			//or
+
+			return function xyz(){
+
+			}
+		}
+		console.log(five());
+
+		//Arrow Function
+		var b = () => {
+			console.log("c")
+		}
+
+		b();
+
+		/*
+		//16video
+		function d(){
+			console.log("b called"); //When you put debugger on any unnivoked function or setTimeout then your most of the part will be executed;
+		}
+
+		function e(param){
+			console.log(param);
+			param();
+		}
+
+		e(d);
+
+		setTimeout(function xyz(){
+			console.log("xyz called"); //When you put debugger on any unnivoked function or setTimeout then your most of the part will be executed;
+		}, 5000);		
+
+
+		function addEventListner(){ //Closures
+			var count = 0;
+			document.getElementById('btn').addEventListener('click', function xyz(){
+				console.log("Clicked", ++count)
+			})			
+		}
+		addEventListner();
+
+		function addEventListner(){// Closures
+			var count = 0;
+			document.getElementById('btn').addEventListener('click', function xyz(){
+				console.log("Clicked", ++count)
+			},{once: true})			
+		}
+		addEventListner();	
+
+		function Constructor(){
+			var count = 0;
+			this.name = "Akash",
+			this.age = 20,
+			this.fun = function(){
+				// count++
+				console.log(count =+ 1);
+			}
+			this.fun2 = function(){
+				console.log(count -= 1);
+			}			
+		}
+
+		var a = new Constructor();
+
+		a.fun();
+		a.fun2();				
+		*/
+
+		/*Constructor Function
+		//Constructor function is used to create objects
+		function Constructor(){
+			this.name = "Akash",
+			this.age = 20,
+			this.dob = "16/05/2001"
+		}
+
+		var obj = new Constructor();
+		console.log(obj.name);
+		*/
+
+		// let a = function () {
+
+		// }	
+
+		// function a(param){
+
+		// }	
+
+		// a(function(){
+
+		// })
+
+		// () => {
+		// 	console.log("a called")
+		// }
+
+		// function counter(){
+		// 	var count = 0
+		// 	this.incrementCounter = function(){
+		// 		count++;
+		// 		console.log(count);
+		// 	}
+		// }
+
+/*
+	#Noticed
+	1) undefined through function console.log(a) and console.log(num);
+	2) Recursion & return check it
+*/
+
+
+	/*
+	//Blocking the main thread
+	console.log("start");
+	setTimeout(function cb(){console.log("callback called"), 5000})
+	console.log("end");
+
+	//Keep busy your console after encoutering setTimout
+	var startDate = new Date().getTime();
+	var endDate = startDate;
+	while(endDate <	startDate + 10000){
+		endDate = new Date().getTime();
+	}
+	console.log("while expires")
+	*/
+
+	// console.log("Start");
+	// 	function cb(){
+	// 	console.log("callback called");
+	// }
+
+	// setTimeout(cb, 0);
+	// console.log("End");
+
+
+	/*
+	//Promise
+
+		let promise = new Promise(function(resolve, rejected){
+		if(true){
+			resolve("Successful");
+		} else {
+			rejected("Rejected");
+		};
+	});
+
+	console.log(promise);
+	// We can assess promise as promise state & promise result
+
+
+	let promise = new Promise(function(resolve, rejected){
+			if(false){
+				resolve("Successful"); They pass its own value to onFulfilment & onRejection
+			} else{
+				rejected("rejected");
+			};
+	});
+
+	let onFulfilment = (result) => {
+		console.log(result);
+	}
+
+	let onRejection = (rejection) => {
+		console.log(rejection);
+	}
+
+	// promise.then(onFulfilment);
+	// promise.catch(onRejection);
+
+	promise.then(onFulfilment).catch(onRejection);	
+
+
+	function promise(check){
+
+		return new Promise(function(resolve, rejected){
+				if(check){
+					resolve("Successful"); 
+				} else{
+					rejected("rejected");
+				};
+		});
+
+	}
+
+		let onFulfilment = (result) => {
+			console.log(result);
+		}
+
+		let onRejection = (rejection) => {
+			console.log(rejection);
+		}	
+
+
+
+	// promise.then(onFulfilment);
+	console.log(promise(true).catch(onRejection)) //You will get pending and states fulfill & result succesful
+
+	promise(true).then(onFulfilment).catch(onRejection);		
+
+
+
+	function promise(check){ //It was an amazing example
+		return new Promise(function(resolve, rejected){
+
+			console.log("Fetching data to load...");
+
+			setTimeout( function(){
+
+				if(check){
+					resolve("Successful");
+				} else{
+					resolve("Rejected");
+				}		
+
+			}, 1000);
+		});
+	};
+
+	let onFulfilment = (result) => {
+		console.log(result);
+	}
+
+	let onRejection = (rejection) => {
+		console.log(rejection);
+	}	
+
+	promise(true).then(onFulfilment).catch(onRejection);	
+
+
+
+	function promise(a, b){ //It was an amazing example
+		return new Promise(function(resolve, rejected){
+
+			var c = a/b;
+
+			setTimeout( function(){
+
+				if(a, b){
+					resolve(`Your value: ${c}`);
+				} else{
+					resolve("Failed to calculate...");
+				}		
+
+			}, 1000);
+		});
+	};
+
+	let onFulfilment = (result) => {
+		console.log(result);
+	}
+
+	let onRejection = (rejection) => {
+		console.log(rejection);
+	}	
+
+	promise(5, 0).then(onFulfilment).catch(onRejection);
+
+
+
+	//AGAIN PRACTICE
+
+	let promise = new Promise(function(resolve, rejcted){
+
+		console.log("The promise is in pending stage...")
+
+		setTimeout(function(){
+			if(true){
+				resolve("Sucessful");
+				console.log("It is successful.")
+			}else{
+				rejceted("Rejceted");
+				console.log("Uff, rejected.")
+			}			
+		}, 10000)
+	})
+
+	console.log(promise);	
+
+
+
+	function promise(check)	{
+		return new Promise(function(resolve, rejected){ //They are callback functions
+			if(check){
+				resolve("Hurray, It is successful.");
+			} else{
+				rejected("Ufff, Not successful.");
+			};
+		});
+	};
+
+	let onFulfilment = (result) =>{
+		console.log(result);
+	}
+
+	let onRejection = (result) =>{
+		console.log(result);
+	}
+
+
+	console.log(promise(false).then(onFulfilment).catch(onRejection));		
+
+*/
+
+/*
+//JavaScript Async Function
+
+//1st
+	async function promise(){
+		return "Hello";
+	}
+
+	console.log(promise()); //Got message promise fulfilled
+
+//2
+	async function promise(){
+		return "Hello";
+	}	
+
+	promise().then((result) => {
+		console.log(result);
+	})		
+
+//3
+	let test = async function promise(){
+		return "Hello";
+	}	
+
+	test().then((result) => {
+		console.log(result);
+	})		
+
+//4
+	let test = async () => {
+		return "Hello";
+	}	
+
+	test().then((result) => {
+		console.log(result);
+	})	
+
+//5 Compiler will check you again
+	async function test(){
+		await console.log(1); //It prints this one as it get and say to code you work aaram se compiler will check you again
+		console.log(2);
+		console.log(3);
+	}
+
+	test();
+	console.log(4);
+
+//6 A Perfect Example
+	async function test(){
+		const a = await fetch("expense.json");
+		const students = await a.json();
+		return students;
+	}
+
+	test().then((res) => {
+		console.log(res);
+	}).catch((err) => {
+		console.log(err)
+	})	
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	
+</body>
+</html>

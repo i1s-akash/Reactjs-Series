@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BePerfectForJsInterviews</title>
+</head>
+<body>
+
+	<script>
+		//Read always Noticed point very well.
+
+		/*
+		//#Day1
+		console.log(foo1()); //{bar: hello}
+		console.log(foo2()); //undefined
+		//It won't return {bar: hello}, for block of object starts from new line that's why when foo2() executes it gets return statement alone & inserts semicolon to it and gives result as undefined(The block of object is here like spoiled code.).
+
+		//Noted: When return value is having nothing it gives us undefined as an output & when you put debugger to it then you will get result for Return value as undefined.
+
+		function foo1()
+		{
+		  return {
+		      bar: "hello"
+		  };
+		}
+
+		function foo2()
+		{
+		  return
+		  {
+		      bar: "hello"
+		  };
+		}
+		*/	
+
+
+		/*
+		//#Day2
+		(function(){
+		  var a = b = 3; //It is the shorthand for b = 3 & var a = b that's why we can write it like this as well.
+		  //b = 3; //It will reference to global variable.
+		  //var a = b; //It will reference to local variable of this function.
+		})();
+
+		console.log("a defined? " + (typeof a !== 'undefined')); //false //It won't be able to make this comparison, for it won't get var a in global memory.
+		console.log("b defined? " + (typeof b !== 'undefined')); //true //type of b & 'undefined' are different & even value for var b and 'undefined' are different too.
+
+		/*
+		var a = b = 3; //It will also be a shorthand for b = 3 & var a = b or we can say var b = 3.
+		console.log("a defined? " + (typeof a !== 'undefined')); //true //Both things won't match.
+		console.log("b defined? " + (typeof b !== 'undefined')); //ture //Both things won't match.	
+
+		//Noted: When you use 'use strict' in both cases you will get refernce error for b.
+		*/
+
+
+		/*
+		//#Day3
+		// var foo = "bar";
+		var myObject = {
+		    foo: "bar",
+		    func: function() {
+		        var self = this;
+		        console.log("outer func:  this.foo = " + this.foo); //bar but not "bar" //In old/normal functions, this keyword is always owner of the object.
+		        console.log("outer func:  self.foo = " + self.foo); //bar but not "bar" //Here It is also like in the above.
+		        (function() {
+		            console.log("inner func:  this.foo = " + this.foo); //undefined //In self invoking function this is always owner of the global variable so if you are having global variable then you will get ouptut easily.
+		            console.log("inner func:  self.foo = " + self.foo); //bar but not "bar" //As self is having this keyword that's why you can think it like this.foo and as above i mentioned this will refer to owner of the object.
+		        }());
+		    }
+		};
+		myObject.func();	
+
+		//Noted: 1. As an output string won't be prined within quotes(	bar but not "bar").
+		//2. In self invoking function, This keyword always is the owner of the global object.
+		*/
+
+// var uname = "Akrixa";
+// var myObject = {
+//     func: function() {
+
+//     //Self invoking function
+//     (function() {
+//         console.log("Inner func: " + this.uname);
+//     }());
+
+//     }
+// };
+// myObject.func();
+
+		//undefined, Akrixa or Akrixa, Undefined or undefined, undefined or Akrixa, Akrixa
+
+console.log(false == '0');
+console.log(fase === '0');
+
+		</script>	
+</body>
+</html>
